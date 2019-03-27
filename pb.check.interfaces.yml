@@ -11,7 +11,7 @@
       provider: "{{ credentials }}"
       display: 'xml'
       commands:
-       - "show interfaces terse {{ item.local_interface }}"
+       - "show interfaces terse xe-0/0/0"
       waitfor:
        - "result[0]['rpc-reply']['interface-information']['physical-interface']['admin-status'] eq up"
       retries: 3
@@ -24,7 +24,7 @@
       provider: "{{ credentials }}"
       display: 'xml'
       commands:
-       - "show interfaces terse {{ item.local_interface }}"
+       - "show interfaces terse xe-0/0/0"
       waitfor:
        - "result[0]['rpc-reply']['interface-information']['physical-interface']['oper-status'] eq up"
       retries: 3
