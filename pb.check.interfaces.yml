@@ -16,9 +16,7 @@
        - "result[0]['rpc-reply']['interface-information']['physical-interface']['admin-status'] eq up"
       retries: 3
       interval: 3
-     with_items:
-     - "{{ lldp }}"
-     when: lldp is defined
+
 
 
    - name: check if interfaces op status is up
@@ -31,7 +29,5 @@
        - "result[0]['rpc-reply']['interface-information']['physical-interface']['oper-status'] eq up"
       retries: 3
       interval: 3
-     with_items:
-     - "{{ lldp }}"
-     when: lldp is defined
+
 
